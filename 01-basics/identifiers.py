@@ -47,7 +47,8 @@ komentáře, proč byl identifikátor použit nesprávně. Navrhněte pod koment
 import_from = 'China'
 
 x = 0 #správně 
-global = 1 #kličové slovo global 
+global = 1 #kličové slovo global, v Pythonu se používá pro označení globální proměněné a dělají to jen ty největší prasata :D
+
 #global y = 1
 PI = 3.14 #spravně
 city = "Opava" #spravně 
