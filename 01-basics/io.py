@@ -98,13 +98,3 @@ využijete na maximum možností výstupů do konzole. Může to být vtipný do
 z matematiky...), průvodce fiktivní instalací atd. Fantazii se meze nekladou a vtipnější vyhrává :-)
 Aplikaci uložte do samostatného souboru myapp.py.     
 """
-
-kdo= input("Zadej kdo nebo co: ")
-pridavno_jmeno = input("Zadej přídavné jmeno: ")
-misto = input("Zadej místo např. (V hospodě, v parku atd..):")
-cas = input("Zadej čas:")
-sloveso = input("Zadej sloveso+podstatné jmeno např.(líže nanuk)")
-
-sedmyPad = input("Zadej 7.pád podstatného jmena(S kým, S čím)")
-
-print("{} {} {} {} {} {}" .format(pridavno_jmeno, kdo, sloveso,misto, cas, sedmyPad ))
