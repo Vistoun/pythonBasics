@@ -1,0 +1,118 @@
+(venv) E:\python\projekt\03-types>python list.py
+Pøíklady rùzných seznamù v Pythonu:
+-----------------------------------
+        Seznam letters: ['a', 'b', 'c', 'd', 'e']
+        Seznam numbers: [5, 18.25, -4, 1800.0, 35, 56, 63]
+        Seznam mixed_list: ['text', False, 2020, [['a', 'b', 'c', 'd', 'e'], [5, 18.25, -4, 1800.0, 35, 56, 63]], {'name': 'Ledecká', 'state': 'CZE', 'number': 100}]
+        Seznam matrix: [[0, 0], [0, 1], [1, 0], [1, 1]]
+
+        Datový typ promìnné mixed_list je <class 'list'>
+
+Pøíklady vytváøení seznamù v Pythonu:
+-------------------------------------
+        Vytvoøení seznamu z øetìzce - chars: ['H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+        Vytvoøení seznamu z rozmezí èísel - hodnoty 1-5: [1, 2, 3, 4, 5]
+        Vytvoøení seznamu z rozmezí èísel - lichá èísla v rozsahu 1-10: [1, 3, 5, 7, 9]
+
+Pøíklady výpisù hodnot ze seznamù
+---------------------------------
+        Vypíše tøetí znak ze seznamu letters: c
+        Vypíše první tøi èísla ze seznamu numbers: [5, 18.25, -4]
+        Vypíše druhý a tøetí znak ze seznamu letters: ['b', 'c']
+        Vypíše každý druhý prvek ze seznamu letters: ['a', 'c', 'e']
+
+1. Cvièení
+***********************************************************************************************
+        Vypíše poslední 2 prvky ze seznamu numbers: [56, 63]
+        Vypíše každý sudý prvek ze seznamu letters: ['b', 'd']
+        Vypíše všechny hodnoty z mixed_list kromì dvou posledních: ['text', False, 2020]
+        Vypíše hodnotu prvku name ze slovníku umístìného v seznamu mixed_list: Ledecká
+        Vypíše hodnotu pøedposledního èísla z listu numbers umístìného v seznamu mixed_list: 56
+***********************************************************************************************
+
+Pøíklady úprav hodnot v seznamu
+------------------------------------------------
+        1. Pøiøazením nového prvku na urèitý index: ['a', 'b', 'C', 'd', 'e']
+        2. Pøiøazením hodnoty urèité subsekvenci (množinì prvkù) seznamu: ['a', 'b', 'C', 'D', 'E', 'F', 'G']
+        3. Použitím metody append() - pøidá prvek na konec seznamu: ['a', 'b', 'C', 'D', 'E', 'F', 'G', 'H']
+        4. Použitím metody insert() pøidá prvek na specifické místo seznamu: ['a', 'b', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+        5. Použitím metody extend() - pøidá nìkolik prvkù na konec seznamu: ['a', 'b', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
+        6. Použitím operátoru + mùžeme kombinovat 2 seznamy (tzv. concatenation): ['a', 'b', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O']
+        7. Použitím operátoru * mùžeme opakovat prvky seznamu: ['a', 'b', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', '?', '?', '?', '?', '?']
+
+Pøíklady odstraòování hodnot v seznamu
+------------------------------------------------
+        1. Použitím klíèového slova del
+                a) del letters[2] - ['a', 'b', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', '?', '?', '?', '?', '?']
+                b) del letters[0:2] - ['C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', '?', '?', '?', '?', '?']
+        2. Použitím metody remove() - letters.remove('L') - ['C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', '?', '?', '?', '?', '?']
+        3. Použitím metody pop() - letters.pop(2) - ['C', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', '?', '?', '?', '?', '?']
+        4. Použitím metody clear() - odds.clear() - []
+        5. Pøiøazením prázdného seznamu k vybrané množinì prvkù - marks[3:5] = [] - [1, 2, 3]
+
+Procházení seznamù pomocí cyklu for
+------------------------------------------------
+        Øetìzec malých písmen: cdfghijkmno?????
+        Indexy místo otazníkù: ['C', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 11, 12, 13, 14, 15]
+
+Vyhledávání hodnot v seznamu
+------------------------------------------------
+        Aktualizovaný seznam letters: ['C', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'G', 'G', 'G', 13, 14, 15]
+        Index prvního výskytu "G": 3
+        Celkový poèet výskytù "G": 4
+
+Øazení hodnot v seznamu
+------------------------------------------------
+        Øazení seznamu - použití funkce sorted(): [-4, 5, 18.25, 35, 56, 63, 1800.0]
+        Øazení seznamu - použití metody sort(): [1800.0, 63, 56, 35, 18.25, 5, -4]
+        Øazení seznamu tvoøeného tuples - použití vlastní funkce, která øídí zpùsob øazení: [('Karel', 20, 'muž'), ('Jana', 21, 'žena'), ('Ivan', 40, 'muž'), ('Milada', 50, 'žena')]
+        Øazení seznamu tvoøeného tuples - použití lambda funkce, která øídí zpùsob øazení: [('Milada', 50, 'žena'), ('Karel', 20, 'muž'), ('Jana', 21, 'žena'), ('Ivan', 40, 'muž')]
+        Výbìr jmen z pùvodního seznamu - použití funkce map(): ['Milada', 'Karel', 'Jana', 'Ivan']
+        Výbìr osob mladších 25 let - použití funkce filter(): ['Milada', 'Karel', 'Jana', 'Ivan']
+
+Pøíklad použití funkce zip()
+------------------------------------------------
+         [(1, ('Karel', 20, 'muž')), (2, ('Jana', 21, 'žena'))]
+         [('K', 1800.0, 'C'), ('a', 63, 'D'), ('r', 56, 'F'), ('e', 35, 'G'), ('l', 18.25, 'H')]
+
+Pøíklad rozbalení/sbalení seznamu do promìnných
+------------------------------------------------
+        Rozbalení seznamu do promìnných: first = 1800.0, second = 63, others = [56, 35, 18.25, 5], last = -4
+
+        Sbalení seznamù do promìnné values: [1, 2, 'ahoj', 3, 'H', 'e', 'l', 'l', 'o']
+
+
+*************************************
+Cvièení 2
+*************************************
+hundreds = [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000]
+ascii = ['Y', 'U', 'K', 'B', 'G', 'O', 'T', 'W', 'H', 'V', 'H', 'Y', 'Y', 'A', 'F', 'R', 'W', 'A', 'R', 'W', 'G', 'A', 'T', 'Z', 'T', 'P', 'F', 'P', 'M', 'T', 'H', 'W', 'Y', 'O', 'O', 'Y', 'Y', 'E', 'T', 'T',
+'W', 'N', 'T', 'P', 'D', 'H', 'G', 'B', 'R', 'F']
+hundreds = [800, 1000, 1200, 1400]
+unique = ['U', 'K', 'V', 'Z', 'M', 'E', 'N', 'D']
+combine = [(800, 'Y'), (1000, 'U'), (1200, 'K'), (1400, 'B')]
+
+*************************************
+Cvièení 3
+*************************************
+Aktualizovaný seznam persons
+        [('Milada', 50, 'žena'), ('Karel', 20, 'muž'), ('Jana', 21, 'žena'), ('Ivan', 40, 'muž'), ('Josef', 38, 'muž'), ('Martin', 18, 'muž'), ('Petra', 68, 'žena'), ('Jiøina', 17, 'žena')]
+
+Seznam žen
+--------------
+Milada
+------
+Jana
+----
+Petra
+-----
+Jiøina
+------
+
+CSV struktura i-lidí
+---------------------
+index;jmeno;vek;pohlavi
+0;Milada;50;žena
+1;Ivan;40;muž
+2;Martin;18;muž
+3;Jiøina;17;žena
