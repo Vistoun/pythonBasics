@@ -30,9 +30,11 @@ class Triangle:
         return cls(random.randrange(min, max), random.randrange(min, max), random.randrange(min, max))        
     def obsah(self):
         s = (self.a + self.b + self.c) / 2
-        return math.sqrt(s*(s-self.a)*(s-self.b)*(s-self.c))
+        print(f"{math.sqrt(s*(s-self.a)*(s-self.b)*(s-self.c))}cm2 ")
+
     def obvod(self):
-        return (self.a + self.b + self.c)
+        print(f"{(self.a + self.b + self.c)}cm")
+        
     def draw(self):
         print(f"Trojuhelnik (a = {self.a}, b = {self.b}, c = {self.c}), color: {self.color}, line thickness = {self.lineThickness}")
 
@@ -42,8 +44,6 @@ class Triangle_height(Triangle):
         self.v = v
     def __str__(self):
         return f'({self.a}, {self.b},{self.c}, {self.v})'     
-    def obsah(self):
-        return (self.v * self.c) / 2
     def draw(self):
         super().draw()
         print(f"v = {self.v}")    
@@ -51,6 +51,8 @@ class Triangle_height(Triangle):
 
 triangle1 = Triangle(5,6,10)
 print(triangle1)
+
+
 
 triangle2 = Triangle_height(5,6,10,12)
 print(triangle2)
@@ -79,3 +81,6 @@ print(f'{"*".ljust(80,"*")}\nPro každý objekt seznamu body proveď jeho symbol
 for i in triangles:
     i.draw()
 
+
+triangle1.obsah()
+triangle1.obvod()
