@@ -71,7 +71,7 @@ class Point:
     #    self.color = color
 
     # Vlastnosti (properties) třídy zprostředkující přístup k zapouzdřeným atributům self.__x, self.__y a self.__color
-    # Getter pro získání hodnoty atributu self.__x
+    # Getteributur pro získání hodnoty at self.__x
     @property
     def x(self):
         return self.__x
